@@ -34,7 +34,6 @@ O **Task Manager** é uma aplicação web de gerenciamento de tarefas que permit
 
 ### 1. Clone o Repositório
 
-```bash
 git clone https://github.com/viniciusabner/task-manager.git
 cd task-manager
 
