@@ -35,20 +35,22 @@ O **Task Manager** é uma aplicação web de gerenciamento de tarefas que permit
 ### 1. Clone o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/task-manager.git
+git clone https://github.com/viniciusabner/task-manager.git
 cd task-manager
-2. Instale as Dependências
+
+### 2. Instale as Dependências
 Front-End:
 bash
-Copiar código
+
 cd frontend
 npm install
 Back-End (Firebase Functions):
 bash
-Copiar código
+
 cd functions
 npm install
-3. Configuração do Firebase
+
+### 3. Configuração do Firebase
 a. Firebase Authentication
 No Firebase Console, vá para a aba Authentication e habilite o método de Email/Senha.
 b. Firebase Firestore
@@ -58,7 +60,7 @@ tasks: Para armazenar as tarefas.
 c. Configuração do Firebase no Projeto
 No diretório frontend, crie um arquivo chamado firebaseConfig.js em src/ e adicione as credenciais do Firebase:
 javascript
-Copiar código
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
@@ -73,20 +75,22 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
-4. Deploy do Firebase Functions
+
+### 4. Deploy do Firebase Functions
 Dentro do diretório functions, configure as notificações de tarefas próximas ao prazo.
 
 Use o Firebase CLI para fazer o deploy das funções:
 
 bash
-Copiar código
+
 firebase deploy --only functions
-5. Inicializar o Projeto Localmente
+
+### 5. Inicializar o Projeto Localmente
 a. Iniciar o Front-End:
 No diretório frontend:
 
 bash
-Copiar código
+
 npm start
 A aplicação será aberta em http://localhost:3000.
 
@@ -103,7 +107,7 @@ As notificações automáticas de tarefas próximas do prazo são gerenciadas pe
 
 Estrutura do Projeto
 bash
-Copiar código
+
 task-manager/
 ├── frontend/                  # Código do Front-End (React)
 │   ├── public/
